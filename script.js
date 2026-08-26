@@ -13,7 +13,7 @@ document.getElementById('LeadForm').addEventListener('submit', async function(ev
 
     try {
         //endpoint URL: /Segment_Lead on 127.0.0.1
-        const response = await fetch('https://leads-segmentation-using-ai.onrender.com', {
+        const response = await fetch('https://leads-segmentation-using-ai.onrender.com/Segment_Lead', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
