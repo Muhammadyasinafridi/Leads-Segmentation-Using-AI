@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Based Leads Intent Segmentation</title>
+        <link rel="stylesheet" href="styleLeads.css">
+
+    </head>
+
+    <body>
+        <div class="main-container">
+            <header class="app-header">
+                <h1>Smart AI Based Leads Intent Segmentation</h1>
+                <p>Empower your revenue engine with automated lead qualification.
+                     By analyzing behavioral metadata at ingestion, our platform instantly classifies incoming web
+                    traffic and routes high-value prospects into tailored sales workflows.</p>
+                
+            </header>
+
+            <form id="LeadForm">
+
+                <div class="form-grid">
+                    <div class="form-column">
+                        <h3>Customer Engagement Metrics</h3>
+                        <div class="user_inputs">
+                            <label for="Total_Visits">Total Visits</label>
+                            <input type="number" id="Total_Visits" placeholder="e.g., 5" min="0" required>
+
+                        </div>
+
+                        <div class="user_inputs">
+                            <label for="TotalTimeSpent_sec">Time Spent on Website (Seconds)</label>
+                            <input type="number" id="TotalTimeSpent_sec" placeholder="e.g., 20"  min="0" required>
+
+                        </div>
+
+                        <div class="user_inputs">
+                        <label for="PageViews_PerVisit">Page Views Per Visit</label>
+                        <input type="number" id="PageViews_PerVisit" step="1" placeholder="e.g., 2" min="0" required>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="form-column">
+                        <h3>Lead Profile & Demographics</h3>
+                        <div class="user_inputs">
+                            <label for="Lead_Origin">Lead Origin</label>
+                            <select id="Lead_Origin" required>
+                                <option value="" disabled selected hidden>Select Lead Origin</option>
+                                <option value="Landing Page Submission">Landing Page Submission</option>
+                                <option value="Lead Add Form">Lead Add Form</option>
+                                <option value="Lead Import">Lead Import</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+
+
+                        </div>
+
+                        <div class="user_inputs">
+                            <label for="Lead_Source">Lead Source</label>
+                            <select id="Lead_Source" required>
+                                <option value="" disabled selected hidden>Select Lead Source</option>
+                                <option value="Google">Google</option>
+                                <option value="Olark Chat">Olark Chat</option>
+                                <option value="Organic Search">Organic Search</option>
+                                <option value="Reference">Reference</option>
+                                <option value="Referral Sites">Referral Sites</option>
+                                <option value="Welingak Website">Welingak Website</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                            
+                        </div>
+
+
+                        <div class="user_inputs">
+                            <label for="Occupation">Current Occupation</label>
+                            <select id="Occupation" required>
+                                <option value="" disabled selected hidden>Select Occupation</option>
+                                <option value="Working Professional">Working Professional</option>
+                                <option value="Unemployed">Unemployed</option>
+                                <option value="Student">Student</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="predict-btn">Analyze Lead Result</button>
+
+                </div>
+
+
+            </form>
+
+            <div id="resultBox" class="result-box" hidden>
+                <div class="result-header">
+                    <span id="tierBadge" class="badge">Tier: N/A</span>
+                    <span class="cluster-id-tag">Cluster ID: <span id="clusterText">-</span></span>
+
+
+                </div>
+
+                <div class="result-body">
+                    <p><strong>Expected Conversion Rate:</strong> <span id="rateText">-</span></p>
+
+                </div>
+
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+
+    </body>
+</html>

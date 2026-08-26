@@ -1,0 +1,150 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter','Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(circle at top left, #1e293b 0%, #2b3242 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Card Container */
+.main-container {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 850px;
+    width: 100%;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.app-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.app-header h1 {
+    font-size: 1.77rem;
+    color: #d6dac2;
+    margin-bottom: 8px;
+}
+
+.app-header p {
+    color: #94a3b8;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Two-Column Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-column h3 {
+    font-size: 1.3rem;
+    color: #3a7e37;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 8px;
+}
+
+/* Input Fields & Selects */
+.user_inputs {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_inputs label {
+    font-size: 1.0rem;
+    color: #edeeea;
+    margin-bottom: 6px;
+}
+
+.user_inputs input,
+.user_inputs select {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.user_inputs input:focus,
+.user_inputs select:focus {
+    border-color: #38bdf8;
+}
+
+/* Submit Button */
+.button-container {
+    text-align: center;
+}
+
+.predict-btn {
+    background: #0e3e57;
+    color: #ffffff;
+    border: none;
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.predict-btn:hover {
+    background: #034d4d;
+}
+
+/* Result Display Box */
+.result-box {
+    margin-top: 24px;
+    padding: 16px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background: #04122c;
+    color: #e0f2fe;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 2.00rem;
+    font-weight: 600;
+}
+
+.cluster-id-tag {
+    color: #c26a19;
+    font-size: 1.9rem;
+}
+
+/* Responsive Scaling for Mobile */
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
