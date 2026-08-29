@@ -1,4 +1,4 @@
-# Digital Marketing Lead Intent Segmentation System
+#Smart AI Based Leads Intent Segmentation System
 
 An end-to-end unsupervised machine learning application that categorizes digital marketing leads based on behavioral patterns and 
 engagement metrics. This project includes a complete data preprocessing pipeline, model selection benchmark, a **FastAPI** REST backend, 
